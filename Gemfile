@@ -5,11 +5,8 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3-ruby', '1.2.5', :group => :development
+gem 'sqlite3',:group => :development
 
-gem 'rename'
-
-gem 'json'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -23,7 +20,15 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :development, :test do
+  gem 'rspec-rails', '2.4.1'
+end
+
+
+gem "paperclip", "~> 3.0"
+
 gem 'jquery-rails'
+gem 'jquery_datepicker'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -38,4 +43,4 @@ gem 'jquery-rails'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'ruby-debug'
+ gem 'debugger'
